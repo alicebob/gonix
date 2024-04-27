@@ -1,6 +1,6 @@
 .PHONY: build
 build:
-	nix build
+	nix build -L
 
 .PHONY: vendor
 vendor:

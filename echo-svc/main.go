@@ -9,5 +9,5 @@ import (
 )
 
 func main() {
-	fmt.Printf("hi!\n")
+	fmt.Printf("hello5!\n")
 }
