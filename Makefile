@@ -9,4 +9,4 @@ vendor:
 
 .PHONY: fmt
 fmt:
-	nix fmt flake.nix
+	nix fmt flake.nix gocache.nix
