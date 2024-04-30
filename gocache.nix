@@ -2,7 +2,6 @@
 
 pkgs.stdenv.mkDerivation {
   name = "gocache";
-  buildInputs = [ pkgs.gnugrep ];
   src = pkgs.lib.sourceByRegex ./. [
     "^go.(mod|sum)$"
     "vendor"
@@ -16,7 +15,7 @@ pkgs.stdenv.mkDerivation {
     export GOCACHE=$out/cache
     mkdir -p $out/cache;
 
-    ${pkgs.go}/bin/go build -v `cat vendor/modules.txt |grep -v '#'|grep -v sys/windows|grep -v tpmutil/tbs|grep -v internal`
+    ${pkgs.go}/bin/go build -v `${pkgs.go}/bin/go list ./vendor/...`
     mkdir -p $out/nix-support
     cat > $out/nix-support/setup-hook <<EOF
        cp --reflink=auto -r $out/cache $TMPDIR/go-cache
