@@ -1,4 +1,4 @@
-Experiment to keep the Go build cache around for Go projects which use Nix and vendor their modules.
+Small nix file to keep the Go build cache around for Go projects which use Nix and vendor their modules.
 
 Status: seems to work.
 
