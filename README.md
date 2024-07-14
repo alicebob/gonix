@@ -15,7 +15,5 @@ Usage: copy gocache.nix into your own project, and use it as an input:
    ...
 ```
 
-I upload everything to my local attic cache.
-
 
 Based on https://github.com/numtide/build-go-cache .
